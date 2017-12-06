@@ -1,0 +1,86 @@
+ES6; Where we are coming from, Where we are and Where we are going.
+INTRODUCTION
+ECMAScript ("European Computer Manufacture Association") is an object oriented programming language for performing computations and manipulating computational objects within a host environment. 
+HISTORY: WHERE WE ARE COMING FROM
+It was founded shortly after the first version of browser implememntation specification for JavaScript was released. It was called ECMAScript1 in 1997.ECMAScript was originally designed to be a web scripting language, providing a machanism to enliven web pages in browsers and to perform server computation. 
+Where are we? ES6
+ES6 is short for ECMAScript 2015. As at when ES6 was made official in June 2015, it could not be implemented by browsers by a flick of switch. It can be used with a JavaScript transpiler which would convert the code written in ES6 to ES5 code which would run smoothly in any browser. ES6 will bring a lot of syntatical sugar that will make JavaScript code easy to write and understand. It is JavaScript, the current, official JavaScript. ES6 is a significant update to the language and the first update to the language since ES5 was standardized in 2009. 
+
+Features of ES6
+With ES6, we have new keywords from ES5 for variable declaration like "let", "const", "arrow functions", "classes", "template strings", "default parameters", "sets" and "generators". 
+Arrow Functions - This is a shorthand way to write functions using "=>" syntax. They are     syntactically similar to the related feature in C#.Java8 and CoffeeScript.
+        For example:
+        
+        var fn1 = function (a) {
+            return 2 * a;
+        }
+ In ES6, the arrow function would be written as:
+           const fn2 = (a) => 2 * a;
+
+Rest Parameter - It's a way of capturing any number of arguements passed into a function in an array. This is similar to arguements but will give you an actual array.
+    
+    var fn = (a, b, ...theRest) =>{
+        console.log(a);
+        console.log(b);
+        console.log(theRest);
+    }
+    
+    fn("A", "B", "C", "D", "E");
+Let- Let is the new "var"
+Const - Const is a single assignment.
+Class - In the example below, a class has a constructor that is called when you call "new Basic". In this class the constructor expects a single arguement "name". This "name" is assigned to "this.name" which is a variable assigned to the instance created. 
+class Basic{
+        constructor (name){
+            this.name = name;
+            } 
+            greetings(){
+            console.log(`Hi me name is ${this.name}`);
+            }
+    }
+    var trend = new Basic ("Martha");
+trend.greetings();
+
+Iterators + For..Of -  Iterator objects enable custom iteration like CLR IEnumerable or Java Iterable. Generaliize "fir..in" to custom iiterator-based iteration with "for..of". Don't require realizing in an array, enabling lazy design patterns.
+Default Parameter-  This new keyword allows us to initialize functions with default values. A default is used when an arguement is either omitted or undefined. This makes the code more organized and even shorter
+Sets - is a data structure that collects unique values and doesn't support the duplicate of the value collected. 
+
+    window.download = function(){
+        var names = ["Bola", "Ego", "Ife", "Tomiide", "Kemi", "Steph", "Tomiiide", "Kemi", "Ife"];
+        var nodeNames = new Set (names);
+        console.log(nodeName);
+    }
+The output of the above code would be "Bola", "Ego", "Ife", "Tomiide", "Kemi", "Steph". The Set keyword has eliminated the second Tomiiide, Kemi and Ife.
+Generators- It's a keyword that takes control over the flow of functions such a when to play and pause. They simplify iterator-authoring using "function*" and "yield". A function declared as "function* returns a generator instance. Generators are subtypres of iterators which include additional "next" and "throw". These enable values to flow back into the generator, so "yield" is an expression form which returns a value.
+Destructuring assignment - This allows the spreading of arrays or objects into distinct variables. To use the destructuring assignment syntax, you'll add ".." before the array to destructure it.
+Temperate Literals - This is another way of writing string literals but allowing you to embed expressions into the string. Strings are usually enclosed in " ", while template literals are enclosed within back-ticks ` `. Expressions embedded within the template string sit within "${}" brackets. They feature multiline, have a raw property allowing you to access the raw string and output modification using tagged template literals.
+For example: 
+        var name = "Mia";
+        console.log (`Hi my name is ${name}.`);
+
+
+
+
+ES6 is the future of JavaScript and Web development. Although ES6 doesn't have full browser compatibility, it's the direction that the JavaScriptlanguage is headed. The reasons why ES6 is the future of JavaScript and Web Development. 
+
+    i. ES6 features can be written today since the transpiler, Babel, rewrites the code in the older ES5 language. So developers benefit from faster new features available in ES6 without waiting for web browsers to catch up to the new technology, hence they live in the future already.
+
+    ii. ES6 has object-oriented classes and supports a method of inheritance called prototypical inheritance. It's a version of the inheritance that is a bit different from classical inheritance. It also supports class syntax. This mirrors other programming languages, but ES6 takes the traditional style of defining classes ad inheritance and maps it to the correspondong protoype chain. Although this is a small change, but it can make it  a lot smoother to write object-oriented code in ES6 compared to other languages.
+    
+    iii. Modules are built into ES6. It provides one definite way to load and export modules. The syntax is also suitable both for server-side and client-sdie functionally.
+    
+    iv. ES6 uses yarn, which like NPM usually loaded in JavaScript packages, allows you to bring dependencies into your project and it allows you to pull them from the NPM source too.
+    
+    v. ES6 solves the same problems as CoffeeScript but in a better way.  The CoffeeScript programming language was designed to make it a lot more difficult for developers to write buggy codes. Since ES6 is backward compatible with JavaScript code, it's easy to learn incrementally and start adopting features slowly.
+    
+    vi. The "const" and let" features of ES6  solve the traditional scoping. This allows developers to write safer codes with less worry about leaking the variable out of scope and prevent you from having duplicae declarations of the variable in the scope.
+    
+    vii. ES6 has a new feature called Spread Operator which is an interesting way to build new arrays based on the values of existing arrays. The spread operator is a single construct in the ES6 language that is super versatile which is similar to the splat operator in Ruby. It can copy an array, concantenate an array, insert new items into arrays, etc. The spread operator is a powerful tool. Once you start figuring it out, it will become your go-to solution when working with arrays.
+    
+    viii. ES6 has a feature called promises. which make the async nature of JavaScript more predictable and friendlier to handle. They provideconsistent way of handling future events instead of arbitrary library specific patterns. This makes it easire to understand how to structure your code
+WHERE ARE WE GOING? THE FUTURE OF ES6
+    As JavaScript is anything but a static language, at the release of ES6, which is still being adopted, the language has continued  to evolve at a rapid pace, introducing ES7 (ES2016+). The ES7 (and beyond) has a list of features which every JavaScript developer would be using soon, if not immediately. The major gamechanges would be ObjectRest/ Spread Properties, Observables and Async functions.
+References
+1. Clean Code with ES6 Default Parameters & Property. https://www.sitepoint.com
+2. Beginner Bites: ES6 features. https://hackermoon.com
+3. How to learn ES6 – JavaScript https://medium.com
+4. ES6 for Beginners: Introduction  https://pointdeveloper.com
