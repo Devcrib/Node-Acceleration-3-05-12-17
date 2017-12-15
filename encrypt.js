@@ -39,7 +39,7 @@ function encode(string) {
       }
       stringResult += result[i][j];
     }
-    j++;
+    j++; stringResult += ' ';
   }
   encoded.push(stringResult);
   j++;
